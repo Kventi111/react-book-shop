@@ -6,9 +6,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FCF9DE;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.content {
+  margin: 30px auto;
+}
+
+.cotainer {
+  max-width: 960px;
+  margin: 0 auto;
 }

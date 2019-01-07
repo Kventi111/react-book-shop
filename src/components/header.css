@@ -1,0 +1,15 @@
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.header__logo {
+  justify-self: flex-start;
+}
+
+
+.header__cart {
+  justify-self: flex-end;
+}
