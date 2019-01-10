@@ -1,42 +1,40 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import Header from '.'
 
-import { fetchBooks } from '../actions/book'
+import Header from './header'
 import BookList from './bookList'
+import Filter from '../container/filter'
+
+import './app.css'
 
 class App extends Component {
 
   componentWillMount() {
-    const { fetchBooks } = this.props
+    const { fetchBooks,filter } = this.props
 
     fetch('/books.json')
       .then( response =>  response.json()  )
-      .then( data => { 
-
+      .then( data => {         
         fetchBooks(data)
-
       })
+
   }
 
   render() {
     return (
       <div className="App">
         <Header />
-        <div className="container content">
-          <BookList />
+        <div className="container content app-grid">
+          <div className="app-left">
+            <BookList />
+          </div>
+          <div className="app-right">
+          <Filter/>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ book })  => ({
-  book
-})
 
-const mapDispatchToProps = dispatch => ({
-  fetchBooks : books => dispatch(fetchBooks(books))
-})
-
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+export default App
