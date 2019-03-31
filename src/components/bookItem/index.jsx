@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux'
 
-import { addToCart } from '/Users/babaevmagomed/Sites/react/react-book-shop/react-books/src/actions/cart.js'
+import { addToCart } from '../../actions/cart'
 import './bookItem.css'
 
 class bookItem extends Component {
