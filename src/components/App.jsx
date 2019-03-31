@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import Header from '.'
 
+
+
 import { fetchBooks } from '../actions/book'
 import BookList from './bookList'
+
+import {
+  Wrapper
+} from './style'
 
 class App extends Component {
 
@@ -22,10 +28,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <div className="container content">
-          <BookList />
-        </div>
+        
+        {/* <Header /> */}
+          <div className="container content">
+          <Wrapper>
+            <BookList />
+          </Wrapper>
+          </div>
       </div>
     );
   }
